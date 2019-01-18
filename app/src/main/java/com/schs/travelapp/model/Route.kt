@@ -1,6 +1,5 @@
 package com.schs.travelapp.model
 
-class Route (routeName: String, routeLocation: String) {
+class Route (routeName: String) {
     val name = routeName
-    val location = routeLocation
 }
