@@ -1,8 +1,14 @@
 package com.schs.travelapp.model
 
-class User (username: String, password: String, userRoutes: List<Route>) {
-    val name = username
-    val location = password
-    val routes = mutableListOf<Route>()
+class User (val username: String, val password: String) {
+    val routes: MutableList<Route>
 
+    init {
+        routes = mutableListOf<Route>()
+    }
+
+    fun addNewRoute(routeName: String) {
+        val newRoute = Route(routeName)
+        routes.add(newRoute)
+    }
 }
